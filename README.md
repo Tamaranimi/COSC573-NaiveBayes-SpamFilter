@@ -10,42 +10,47 @@ The main implementation is in `src/spamham.py`, specifically `SpamHam.evaluate(w
 
 ## Requirements
 
-- Python 3 (standard library only)
-- No additional pip packages required
+* Python 3 (standard library only)
+* No additional pip packages required
 
 ## Run
 
 Open a terminal **inside this `SpamHam` folder**:
 
 ```powershell
+cd SpamHam
+
 python3 src/main.py
+
+python3 run\_experiments.py
+
 python3 -m testrunner
-python3 run_experiments.py
+
 ```
 
 On Windows, `python` or `py -3` can be used instead of `python3` if needed.
 
 ## Verified results
 
-| Input | Computed spam probability | Interpretation |
-|---|---:|---|
-| `spamesim.txt` | `1.0` (floating-point rounded) | Spam |
-| `hamesim.txt` | `3.641589521379177e-46` | Ham |
+|Input|Computed spam probability|Interpretation|
+|-|-:|-|
+|`spamesim.txt`|`1.0` (floating-point rounded)|Spam|
+|`hamesim.txt`|`3.641589521379177e-46`|Ham|
 
 The two included instructor tests passed locally (`2/2`). These are **two sample checks**, not evidence of general classification accuracy. The experiment script evaluates 13 cases total, but only the two supplied messages have provided class labels; the other 11 cases are controlled diagnostics.
 
 ## Results and files
 
-- `src/spamham.py` — classifier implementation
-- `src/main.py` — example runner
-- `spamcount.txt`, `hamcount.txt` — training word counts
-- `spamesim.txt`, `hamesim.txt` — example messages
-- `test/`, `testrunner/` — instructor-supplied testing infrastructure
-- `run_experiments.py` — reproducible diagnostic experiments
-- `experiment_results/classifications.csv` — classification results
-- `experiment_results/word_probabilities.csv` — selected word likelihoods
-- `experiment_results/RESULTS.md` — results interpretation
-- `PROJECT_NOTES.md` — implementation details and limitations
+* `src/spamham.py` — classifier implementation
+* `src/main.py` — example runner
+* `spamcount.txt`, `hamcount.txt` — training word counts
+* `spamesim.txt`, `hamesim.txt` — example messages
+* `test/`, `testrunner/` — instructor-supplied testing infrastructure
+* `run\_experiments.py` — reproducible diagnostic experiments
+* `experiment\_results/classifications.csv` — classification results
+* `experiment\_results/word\_probabilities.csv` — selected word likelihoods
+* `experiment\_results/RESULTS.md` — results interpretation
+* `PROJECT\_NOTES.md` — implementation details and limitations
 
 ## Limitations
 
@@ -53,8 +58,9 @@ The supplied code uses whitespace-only tokenization, so capitalization and punct
 
 ## Source and attribution
 
-- Assignment starter archive: [SpamHam.zip](https://materiaalit.github.io/intro-to-ai/files/tests/SpamHam.zip), from [Introduction to AI course materials](https://materiaalit.github.io/intro-to-ai/).
-- Word-count data provenance, as stated by the assignment: [Apache SpamAssassin](https://spamassassin.apache.org/).
-- Supporting reading: [Raschka, *Naive Bayes and Text Classification I*](https://arxiv.org/abs/1410.5329); [Sahami et al., *A Bayesian Approach to Filtering Junk E-mail*](https://cdn.aaai.org/Workshops/1998/WS-98-05/WS98-05-009.pdf).
+* Assignment starter archive: [SpamHam.zip](https://materiaalit.github.io/intro-to-ai/files/tests/SpamHam.zip), from [Introduction to AI course materials](https://materiaalit.github.io/intro-to-ai/).
+* Word-count data provenance, as stated by the assignment: [Apache SpamAssassin](https://spamassassin.apache.org/).
+* Supporting reading: [Raschka, *Naive Bayes and Text Classification I*](https://arxiv.org/abs/1410.5329); [Sahami et al., *A Bayesian Approach to Filtering Junk E-mail*](https://cdn.aaai.org/Workshops/1998/WS-98-05/WS98-05-009.pdf).
 
 This repository incorporates educational starter materials. Consult the upstream sources for their applicable reuse and licensing terms before redistributing them.
+
