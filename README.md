@@ -8,6 +8,8 @@ The classifier reads word frequencies from `spamcount.txt` and `hamcount.txt`, e
 
 The main implementation is in `src/spamham.py`, specifically `SpamHam.evaluate(words)`.
 
+The theoretical basis for the classifier includes Bayes' rule and naive Bayes models, as discussed in Chapter 12, Sections 12.5–12.6, of Russell and Norvig's *Artificial Intelligence: A Modern Approach* (4th ed., Global ed.).
+
 ## Requirements
 
 * Python 3 (standard library only)
@@ -19,23 +21,19 @@ From the repository root, run:
 
 ```powershell
 cd SpamHam
-
 python3 src/main.py
-
 python3 run_experiments.py
-
 python3 -m testrunner
-
 ```
 
 On Windows, `python` or `py -3` can be used instead of `python3` if needed.
 
 ## Verified results
 
-|Input|Computed spam probability|Interpretation|
-|-|-:|-|
-|`spamesim.txt`|`1.0` (floating-point rounded)|Spam|
-|`hamesim.txt`|`3.641589521379177e-46`|Ham|
+| Input | Computed spam probability | Interpretation |
+|---|---:|---|
+| `spamesim.txt` | `1.0` (floating-point rounded) | Spam |
+| `hamesim.txt` | `3.641589521379177e-46` | Ham |
 
 The two included instructor tests passed locally (`2/2`). These are **two sample checks**, not evidence of general classification accuracy. The experiment script evaluates 13 cases total, but only the two supplied messages have provided class labels; the other 11 cases are controlled diagnostics.
 
@@ -60,7 +58,8 @@ The supplied code uses whitespace-only tokenization, so capitalization and punct
 
 * Assignment starter archive: [SpamHam.zip](https://materiaalit.github.io/intro-to-ai/files/tests/SpamHam.zip), from [Introduction to AI course materials](https://materiaalit.github.io/intro-to-ai/).
 * Word-count data provenance, as stated by the assignment: [Apache SpamAssassin](https://spamassassin.apache.org/).
-* Supporting reading: [Raschka, *Naive Bayes and Text Classification I*](https://arxiv.org/abs/1410.5329); [Sahami et al., *A Bayesian Approach to Filtering Junk E-mail*](https://cdn.aaai.org/Workshops/1998/WS-98-05/WS98-05-009.pdf).
+* Russell, S. J., & Norvig, P. (2022). *Artificial Intelligence: A Modern Approach* (4th ed., Global ed.). Pearson. See Chapter 12, Sections 12.5–12.6, on Bayes' rule and naive Bayes models.
+* Raschka, S. *Naive Bayes and Text Classification I — Introduction and Theory*. [arXiv:1410.5329](https://arxiv.org/abs/1410.5329).
+* Sahami, M., Dumais, S., Heckerman, D., & Horvitz, E. (1998). *A Bayesian Approach to Filtering Junk E-Mail*. [AAAI Workshop paper](https://cdn.aaai.org/Workshops/1998/WS-98-05/WS98-05-009.pdf).
 
-This repository incorporates educational starter materials. Consult the upstream sources for their applicable reuse and licensing terms before redistributing them.
-
+This repository incorporates educational starter materials. Consult the upstream sources for their applicable reuse and licensing terms before redistributing them. The Russell and Norvig textbook is cited as a reference; its PDF is not included in this repository.
