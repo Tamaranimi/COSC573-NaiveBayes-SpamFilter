@@ -1,0 +1,20 @@
+# Python generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local test runner artifacts
+.test_results.json
+.available_points.json
+
+# Temporary files
+*.tmp
+*.log
