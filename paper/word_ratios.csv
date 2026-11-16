@@ -1,0 +1,5 @@
+token,spam_count,ham_count,q_spam,ratio
+free,624,438,0.0082904,5.502
+money,414,165,0.0055003,9.690
+linux,161,909,0.0021390,0.684
+listinfo,44,895,0.0005846,0.190

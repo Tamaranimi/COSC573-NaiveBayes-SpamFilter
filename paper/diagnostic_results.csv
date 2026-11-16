@@ -1,0 +1,12 @@
+display_case,tokens,posterior,decision,group
+free,1,0.8461964369830097,spam,controlled diagnostic
+money,1,0.9064520798703553,spam,controlled diagnostic
+linux,1,0.4061758873790851,ham,controlled diagnostic
+listinfo,1,0.15956205163449894,ham,controlled diagnostic
+free linux,2,0.7900585578129616,spam,controlled diagnostic
+free repeated 5 times,5,0.9998016693304197,spam,controlled diagnostic
+empty input,0,0.5,tie (0.5),edge case
+completely unseen token,1,0.5,tie (0.5),edge case
+Free,1,0.5,tie (0.5),tokenization diagnostic
+free!,1,0.5,tie (0.5),tokenization diagnostic
+unseen token repeated 1000 times,1000,0.5,tie (0.5),stability check

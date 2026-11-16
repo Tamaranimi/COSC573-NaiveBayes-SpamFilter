@@ -1,0 +1,29 @@
+COSC 573 Naive Bayes paper — updated LaTeX source package
+
+Main source: COSC573_NaiveBayes_Paper.tex
+Output: COSC573_NaiveBayes_Paper.pdf
+Style: adapted from the author's COSC 750 single-column arXiv-like preprint, with 11 pt type, 1-inch margins, numbered sections, numbered equations, booktabs tables, and vector TikZ/PGFPlots figures.
+
+Author email in title block:
+kenanaghan0131@students.bowiestate.edu
+
+Compile in Overleaf:
+1. Upload every file in this source package.
+2. Set the compiler to pdfLaTeX.
+3. Recompile twice for references and page counts.
+
+Reproducible experimental assets:
+- classifications.csv                raw recorded experiment outcomes
+- word_probabilities.csv            raw selected word-probability output
+- labeled_results.csv               derived CSV for the instructor-test table
+- diagnostic_results.csv            derived CSV for the diagnostic table
+- word_ratios.csv                   derived CSV for the likelihood-ratio table
+- figure_word_posteriors.csv        derived CSV for the single-word bar chart
+- figure_repeat.csv                 derived CSV for the repetition/mixed-evidence chart
+
+Important note:
+All figures and experimental tables in the paper regenerate from the bundled CSV files. The workflow diagram is a vector TikZ figure authored in the paper source. The bundled CSV files preserve the recorded COSC 573 experiment results; regenerating the PDF reproduces the paper's tables and figures without re-running the classifier.
+
+The two instructor messages are the only labeled examples. All other experiments are controlled diagnostics, not an accuracy benchmark.
+
+Note: unlike the COSC 750 paper, COSC 573 has no Stage 4 sections or instructor-specific arXiv mandate; this package only matches that visual style.

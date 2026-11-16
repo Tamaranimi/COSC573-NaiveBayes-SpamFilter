@@ -1,0 +1,3 @@
+input_file,tokens,posterior,predicted_label,status
+spamesim.txt,140,1.0,spam,correct
+hamesim.txt,232,3.641589521379177e-46,ham,correct

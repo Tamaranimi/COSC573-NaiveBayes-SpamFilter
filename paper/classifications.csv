@@ -1,0 +1,14 @@
+case,group,tokens,spam_probability,predicted_label,expected_label_if_provided,correct_if_labeled
+instructor_spam,provided example,140,1.0,spam,spam,True
+instructor_ham,provided example,232,3.641589521379177e-46,ham,ham,True
+empty_input,edge case,0,0.5,tie (0.5),,
+unseen_word,edge case,1,0.5,tie (0.5),,
+spam_signal_free,controlled diagnostic,1,0.8461964369830097,spam,,
+ham_signal_linux,controlled diagnostic,1,0.4061758873790851,ham,,
+spam_signal_money,controlled diagnostic,1,0.9064520798703553,spam,,
+ham_signal_listinfo,controlled diagnostic,1,0.15956205163449894,ham,,
+mixed_free_linux,controlled diagnostic,2,0.7900585578129616,spam,,
+repeat_free_5,controlled diagnostic,5,0.9998016693304197,spam,,
+capitalized_Free,tokenization diagnostic,1,0.5,tie (0.5),,
+punctuated_free,tokenization diagnostic,1,0.5,tie (0.5),,
+unseen_repeated_1000,stability check,1000,0.5,tie (0.5),,
